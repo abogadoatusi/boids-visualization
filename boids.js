@@ -340,10 +340,10 @@ toggleBtn.addEventListener('click', () => {
 
     if (isHidden) {
         controlPanel.classList.remove('hidden');
-        toggleBtn.textContent = '✕';
+        toggleBtn.classList.add('active');
     } else {
         controlPanel.classList.add('hidden');
-        toggleBtn.textContent = '⚙️';
+        toggleBtn.classList.remove('active');
     }
 });
 

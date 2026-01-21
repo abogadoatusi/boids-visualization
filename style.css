@@ -23,26 +23,51 @@ body {
     cursor: crosshair;
 }
 
-/* Toggle button */
+/* Toggle button - Hamburger Menu */
 .toggle-btn {
     position: fixed;
     top: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
+    background: rgba(30, 35, 48, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(255, 154, 158, 0.3);
     z-index: 1000;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
 }
 
 .toggle-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(255, 154, 158, 0.4);
+    background: rgba(40, 45, 58, 0.95);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle-btn .line {
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* X state when menu is open */
+.toggle-btn.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.toggle-btn.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-btn.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Control panel */

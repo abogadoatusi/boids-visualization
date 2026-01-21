@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boids アルゴリズム - 群れの動き</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="toggleBtn" class="toggle-btn">⚙️</button>
+
+    <div class="control-panel" id="controlPanel">
+        <div class="panel-header">
+            <h2>🐦 Boids</h2>
+        </div>
+
+        <div class="control-group">
+            <label>分離力: <span id="separationValue">1.5</span></label>
+            <input type="range" id="separation" min="0" max="3" step="0.1" value="1.5">
+        </div>
+        <div class="control-group">
+            <label>整列力: <span id="alignmentValue">1.0</span></label>
+            <input type="range" id="alignment" min="0" max="3" step="0.1" value="1.0">
+        </div>
+        <div class="control-group">
+            <label>凝集力: <span id="cohesionValue">1.0</span></label>
+            <input type="range" id="cohesion" min="0" max="3" step="0.1" value="1.0">
+        </div>
+
+        <div class="control-buttons">
+            <button id="resetBtn">🔄 リセット</button>
+        </div>
+
+        <div class="info-section">
+            <div class="count-display">動物の数: <span id="count">1</span></div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="boids.js"></script>
+</body>
+
+</html>
